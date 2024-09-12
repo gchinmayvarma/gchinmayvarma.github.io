@@ -3,7 +3,7 @@ let particles = document.getElementsByClassName("particle");
 let particle_count = 0;
 
 function particle_make(ay) {
-    if (particle_count > 300) return;
+    if (particle_count > 50) return;
     let particle = document.createElement("div");
     particle.className = "particle";
     particle.custom = {};
@@ -23,7 +23,7 @@ function particle_make(ay) {
     particle.custom.color_g = 255;
     particle.custom.color_b = 255;
     particle.custom.color_a = random(0, 1);
-    particle.custom.color_da = random(1, 5) / 100;
+    particle.custom.color_da = random(1, 3) / 200;
     if(random(0,1)<0.3) 
         particle.custom.radius = random(0,10);
     else particle.custom.radius = random(0,5);
@@ -36,7 +36,7 @@ function particle_make_more() {
     setTimeout(particle_make_more, random(0, 500));
     let l = random(1,25);
     for (let i = 0; i < l; i++) {
-        particle_make(random(101, 102));
+        particle_make(random(151, 155));
     }
 }
 
@@ -64,13 +64,13 @@ setInterval(particles_work, 1000 / 60);
 // setInterval(particle_make_more, 10)
 for (let i = 0; i < 100 * 2; i++) {
     for (let j = 0; j < 5; j++) {
-        particle_make(random(0, 100));
-        particle_make(random(0, 100));
-        particle_make(random(0, 100));
-        particle_make(random(40, 100));
-        particle_make(random(80, 105));
-        particle_make(random(80, 105));
-        particle_make(random(80, 105));
+        particle_make(50+random(0, 100));
+        particle_make(50+random(0, 100));
+        particle_make(50+random(0, 100));
+        particle_make(50+random(40, 100));
+        particle_make(50+random(80, 105));
+        particle_make(50+random(80, 105));
+        particle_make(50+random(80, 105));
     }
 
     
