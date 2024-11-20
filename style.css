@@ -28,10 +28,32 @@ body {
     margin-top: 200px;
 }
 
-.meimg{
+
+.meimg {
     position: absolute;
-    left: 440px;
+    left: 350px;
+    top: 10px;
+    border: 1px solid transparent;
+    border-radius: 15px; /* Rounded corners */
+    animation: border-animation 3s ease-in;
 }
+
+/* Animation for the border */
+@keyframes border-animation {
+    0% {
+    }
+    33% {
+        border-color: #5a5a5a;
+        box-shadow: 0 0 10px #000000;
+    }
+    66% {
+        border-color: #b5b5b5;
+        box-shadow: 0 0 10px #ffffff;
+    }
+    100% {
+    }
+}
+
 
 .melinks{
     margin: 0%;
