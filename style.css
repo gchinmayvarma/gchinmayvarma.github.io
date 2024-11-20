@@ -21,7 +21,8 @@ body {
 
 .about {
     margin-left: 10px;
-    width: 700px;
+    width: 90%;
+    max-width: 550px;
 }
 
 .about_content{
@@ -63,17 +64,21 @@ body {
     font-size: 20px;
 }
 
+.yspace{
+    height:200px;
+}
 .email{
     font-size: 12px;
 }
 .metxt{
     margin-left: 5px;
 }
+
 .footer {
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: 150%;
+    position: fixed;
+    bottom: 0%;
     width: 100%;
     background-color: #0c0c0d;
     color: rgb(118, 118, 118);
