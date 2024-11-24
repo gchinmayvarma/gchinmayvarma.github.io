@@ -11,19 +11,19 @@ function particle_make(ay) {
   particle.custom.lifeout = random(200, 1000);
   particle.custom.x = Math.floor(Math.random() * 100);
   particle.custom.y = ay;
-  particle.custom.dx = random(-2, 5) / 20;
-  particle.custom.dy = random(-10, -5) / 8;
+  particle.custom.dx = random(-2, 5) / 40;
+  particle.custom.dy = random(-10, -5) / 16;
   particle.custom.theta = random(0, TWO_PI);
-  particle.custom.dtheta = random(-1, 1) / 40;
+  particle.custom.dtheta = random(-1, 1) / 30;
   particle.custom.s = 0;
   particle.custom.ds = 0;
   particle.custom.dds = 0;
-  particle.custom.ddds = random(0, 0.00000005);
+  particle.custom.ddds = random(0, 0.000000025);
   particle.custom.color_r = 255;
   particle.custom.color_g = 255;
   particle.custom.color_b = 255;
   particle.custom.color_a = random(0, 1);
-  particle.custom.color_da = random(1, 3) / 300;
+  particle.custom.color_da = random(1, 3) / 600;
   if (random(0, 1) < 0.3) particle.custom.radius = random(0, 10);
   else particle.custom.radius = random(0, 5);
   particle.style.width = particle.style.height = particle.custom.radius + "px";
@@ -79,10 +79,10 @@ function particles_work() {
   }
 }
 
-setInterval(particles_work, 1000 / 60);
+setInterval(particles_work, 1000 / 120);
 // setInterval(particle_make_more, 10)
 for (let i = 0; i < 100 * 2; i++) {
-  for (let j = 0; j < 5; j++) {
+  for (let j = 0; j < 6; j++) {
     particle_make(50 + random(0, 100));
     particle_make(50 + random(0, 100));
     particle_make(50 + random(0, 100));
