@@ -307,11 +307,11 @@ body {
 }
 
 a {
-    color: rgb(177, 177, 177);
+    color: rgb(177, 177, 177, 0.8);
     font-size: 32px;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
     margin: 6px 12px;
-    text-decoration: underline rgba(122, 122, 122, 0.39);
+    text-decoration: underline rgba(122, 122, 122, 0.7);
 
 }
 
