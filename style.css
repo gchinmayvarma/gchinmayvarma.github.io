@@ -7,7 +7,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #D3C6B6;
-    background: #000;
+    background: none;
     overflow-x: hidden;
     /* overflow: hidden;
     -webkit-user-select: none;
@@ -17,6 +17,10 @@ body {
 
     /* max-height: 500px; Set the maximum height for the page */
     overflow-y: auto; 
+}
+
+html{
+    background-color: #000;    
 }
 
 .about {
@@ -360,8 +364,6 @@ a:hover {
     color: rgb(255, 105, 105);
     /* animate the dashed rotate */
     animation: dashed 1s nfinite;
-
-
 }
 
 .border {
@@ -370,17 +372,14 @@ a:hover {
                 background-size: 15px 1px, 15px 1px, 1px 15px, 1px 15px;
                 /* background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px; */
                 animation: border-dance 10s infinite linear;
-        }
+}
 
-        @keyframes border-dance {
-            0% {
-                background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
-            }
+@keyframes border-dance {
+    0% {
+        background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+    }
 
-            100% {
-                background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
-            }
-        }  
-
-
-        
+    100% {
+        background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
+    }
+} 
