@@ -1,13 +1,13 @@
 function setup() {
   let cnv = createCanvas(cnv_width, cnv_height);
 //   cnv.position(windowWidth  - cnv_width *1.5 , windowHeight / 2 - cnv_height / 2);
-  cnv.position(550, 0);
+  cnv.position(0, 100);
   cnv.style("z-index", "-1");
 
   cnv.style("position", "asbsolute");
 }
 
-let cnv_width = 500;
+let cnv_width = 600;
 let cnv_height = 500;
 
 function windowResized() {
@@ -17,8 +17,12 @@ function windowResized() {
 function draw() {
 //   background(0);
   clear();
-  stroke(200, 80);
+  stroke(200, 120);
   fill(200, 80);
+  if(mouseY > cnv_height*0.4 && mouseY < cnv_height*0.6){
+    fill(255,0,0,80);
+    stroke(255,0,0,120);
+  }
 
 //   push();
 //   translate(width / 2, height * 0.3);
@@ -31,15 +35,20 @@ function draw() {
 //   }
 //   pop();
 
-  let dnal = 200;
+  let dnal = cnv_width/2;
   push();
   translate(width / 2, height * 0.5);
+  rotate(PI);
   r = cos(frameCount * 0.004) * dnal;
-  t = frameCount / 200.0;
-  for (let i = 0; i < TWO_PI - 0.001; i += PI / 3) {
+  t = 0;//frameCount / 200.0;
+  let i_delta = PI*2;
+  // if(mouseClicked){
+  //   i_delta = PI / 3;
+  // }
+  for (let i = 0; i < TWO_PI - 0.001; i += i_delta) {
     let x = cos(i + t) * r;
     let y = sin(i + t) * r;
-    dna(x, y, i + t, dnal - r, frameCount / 10.0);
+    dna(x, y, i + t, dnal - r, frameCount / 20.0);
   }
   pop();
 }
@@ -56,7 +65,7 @@ function dna(x, y, rotat, d, t) {
   let theta = t;
   let dtheta = PI / 12;
   for (let i = 0; i < d; i += ddelta) {
-    let r = 10 + i * 0.05;
+    let r = 10;// + i * 0.05;
     let point_x = i;
     let point_y = sin(theta) * r;
     let point_y2 = sin(theta + PI) * r;
